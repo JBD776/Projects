@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">  
+    <title>Magic Number Game</title>
+    <script>
+        var entry = prompt("enter a whole number");
+        //entry = parseInt(entry);
+
+        var addition = 9;
+        addition = parseInt(addition);
+
+        var multiplication = 2;
+        multiplication = parseInt(multiplication);
+
+        var subtraction = 4;
+        subtraction = parseInt(subtraction);
+
+        var division = 2;
+        division = parseInt(division);
+
+
+    
+        var newNum = entry += addition;
+        newNum = parseInt(newNum);
+
+        var secondNum = newNum* 2;
+        secondNum = parseInt(secondNum);
+
+        var thirdNum = secondNum -= 4;
+        thirdNum = parseInt(thirdNum);
+
+        var fourthNum = thirdNum/2;
+        fourthNum = parseInt(fourthNum);
+
+        var finalNum = fourthNum -= entry;
+        finalNum = parseInt(finalNum);
+     
+
+        alert("The magic number is always " + finalNum);
+    
+        
+    </script>
+</head>
+<body>
+    <script>
+    document.write("<h1>The answer is 7</h1>");
+
+    document.write("The number " + entry + "<br>" + 
+    "plus " + addition + "<br>" + "multiplied by " +
+        multiplication + "<br>" + "minus " + subtraction + "<br>" 
+        + "divided by " + division + "<br>" + "and subtracted by your original entry " + "<br>" +
+        "Will always equal " + finalNum );
+
+     
+        
+    </script>
+
+
+        Thanks for playing!
+        <a href="luckyNumber.html"Click To Play Again>Play Again</a>
+</body>
+</html>

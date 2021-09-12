@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">  
+    <title>Magic Number Game</title>
+    <script>
+        var entry = prompt("enter a whole number");
+        entry = parseInt(entry);
+
+        var additon = 9;
+        additon = parseInt(additon);
+
+        var multiplication = 2;
+        multiplication = parseInt(multiplication);
+
+        var subtration = 4;
+        subtration = parseInt(subtration);
+
+        var division = 2;
+        division = parseInt(division);
+
+
+    
+        var newNum = entry += additon;
+        newNum = parseInt(newNum);
+
+        var secondNum = newNum* multiplication;
+        secondNum = parseInt(secondNum);
+
+        var thirdNum = secondNum -= subtration;
+        thirdNum = parseInt(thirdNum);
+
+        var fourthNum = thirdNum/division;
+        fourthNum = parseInt(fourthNum);
+
+        var finalNum = fourthNum -= entry;
+        finalNum = parseInt(finalNum);
+     
+
+        alert("The magic number is always " + finalNum);
+    
+
+    </script>
+</head>
+<body>
+    <script>
+    document.write("<h1>The answer is 7</h1>");
+    document.write("The number" + entery + "<br>" + 
+    "plus" + addition + "<br>" + "multiplied by" +
+        multiplication + "<br>" + "minus" + subtraction + "<br>" 
+        + "divided by" + division + "<br>" +
+        "Will always equal 7" );
+    document.write("Score 1 = " + score1 + "<br>" +
+        "Score 2 = " + score2 + "<br>" +
+        "Score 3 = " + score3 + "<br><br>" +
+      "Average score = " + average + "<br><br>");    
+    </script>
+        Thanks for playing!
+</body>
+</html>
