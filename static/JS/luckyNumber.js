@@ -35,8 +35,10 @@ var entry = prompt("enter a whole number");
 
         document.write("<h1>The answer is 7</h1>");
 
-    document.write("The number " + entry + "<br>" + 
-    "plus " + addition + "<br>" + "multiplied by " +
-    multiplication + "<br>" + "minus " + subtraction + "<br>" 
-    + "divided by " + division + "<br>" + "and subtracted by your original entry " + "<br>" +
+    document.write(
+        
+    "The number " + entry + "plus " + addition + "gives you" + newNum + 
+    "multiplied by " + multiplication + "has a product of " + secondNum + " . " + secondNum + 
+    " minus " + subtraction + " equals " + thirdNum + " . " + thirdNum + " divided by " + division + 
+    + " equals " + fourthNum + " . " + fourthNum + " subtracted by the original number, in this case " + "(" + entry + ")" +
     "Will always equal " + finalNum + "<br>" + "<br>" );
