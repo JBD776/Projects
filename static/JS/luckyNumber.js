@@ -1,3 +1,9 @@
+
+
+var repeat = "y";
+do
+{
+
 var entry = prompt("enter a whole number");
         entry = parseInt(entry);
 
@@ -14,7 +20,8 @@ var entry = prompt("enter a whole number");
         division = parseInt(division);
 
 
-    
+    if(!isNaN(entry) && entry > 0)
+    {
         var newNum = (entry + addition);
         newNum = parseInt(newNum);
 
@@ -29,16 +36,28 @@ var entry = prompt("enter a whole number");
 
         var finalNum = (fourthNum -= entry);
         finalNum = parseInt(finalNum);
-     
+    
 
         alert("The magic number is always " + finalNum);
+
+    }
+    else
+    {
+        alert("invalid entry");
+    }
+    repeat = prompt("Repeat entry?","y");
+}
+    while (repeat == "y");
+
 
         document.write("<h1>The answer is 7</h1>");
 
     document.write(
         
-    "The number " + entry + "plus " + addition + "gives you" + newNum + 
-    "multiplied by " + multiplication + "has a product of " + secondNum + " . " + secondNum + 
-    " minus " + subtraction + " equals " + thirdNum + " . " + thirdNum + " divided by " + division + 
+    "The number " + entry + " plus " + " 9 " + " gives you" + newNum + 
+    " multiplied by " + " 2 " + " has a product of " + secondNum + " . " + secondNum + 
+    " minus " + " 4 " + " equals " + thirdNum + " . " + thirdNum + " divided by " + " 2 " + 
     + " equals " + fourthNum + " . " + fourthNum + " subtracted by the original number, in this case " + "(" + entry + ")" +
-    "Will always equal " + finalNum + "<br>" + "<br>" );
+    " will always equal " + finalNum + "<br>" + "<br>" );
+    
+
