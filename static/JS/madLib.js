@@ -48,15 +48,10 @@ var clearEntries = () =>{
 };    
 
 function myFunction() { 
-     var p = document.createElementById("p");
-     var t = document.createTextNode("Pizza was invented by a " + adjective1 + ' ' + nationality + ' ' + person + '. ' + ' To make a pizza, you need to take a lump of' + 
-     noun1 + ', ' + ' and make a thin, round ' + adjective2 + ' ' + noun2 + '. Then you cover it with ' + adjective3 + ' sauce, ' + adjective4 + 
-     ' cheese, and fresh chopped ' + pluralNoun + '. Next you have to bake it in a very hot ' + noun3 + '. When its done, cut it into ' + num + ' ' + shape + 
-     '. Some kids like ' + food1 + ' pizza the best, but my favorite is the ' + food2 + ' pizza. If i could, I would eat pizza ' + num2 + ' times a day!' );
+     var p = document.getElementById("demo").innerHTML ("Pizza was invented by a " + adjective1 + ' ' + nationality + ' ' + person + '. ' + ' To make a pizza, you need to take a lump of' + 
+noun1 + ', ' + ' and make a thin, round ' + adjective2 + ' ' + noun2 + '. Then you cover it with ' + adjective3 + ' sauce, ' + adjective4 + 
+' cheese, and fresh chopped ' + pluralNoun + '. Next you have to bake it in a very hot ' + noun3 + '. When its done, cut it into ' + num + ' ' + shape + 
+'. Some kids like ' + food1 + ' pizza the best, but my favorite is the ' + food2 + ' pizza. If i could, I would eat pizza ' + num2 + ' times a day!' )
 
-     p.appendChild(t);
-     document.body.appendChild(h);
-         
-        
+};
 
-}

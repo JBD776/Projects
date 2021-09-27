@@ -41,8 +41,3 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#sale").focus();
 });
 
-var name = prompt("Enter the name to print on your tee-shirt");
-while (name.length > 12)  {
-      name = prompt("Too long. Enter a name with fewer than 12 characters.");
-}
-alert("The name to be printed is " + name.toUpperCase());
