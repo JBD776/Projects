@@ -4,12 +4,6 @@ const $ = function(id){
     return document.getElementById(id);
 };
 
-var joinList = function() {
-    var emailAddress1 = $("email_address1").value;
-    var emailAddress2 = $("email_address2").value;
-    var firstName = $("first_name").value;
- 
-};
 
 //Get value of queryString parameter using the parameter key
 const getQueryStringParmValue = (parmKey) => {
@@ -18,18 +12,25 @@ const getQueryStringParmValue = (parmKey) => {
     //retrieve the list of parameters
     const urlParams = new URLSearchParams(queryString);
     //get param value
-    const paramValue = urlParams(parmKey);
+    const paramValue = urlParams.get(parmKey);
     console.log('parmKey/value' + parmKey + ':' + paramValue);
     return paramValue;
 };
 
 const confirmData = function(){
+    $('confirm_form').submit();
+};
+
+window.onload = function(){
+
     $("firstName").innerHTML = 'First Name:' +
-        getQueryStringParmValue(first_name);
+        getQueryStringParmValue("first_name");
 
     $("emailAddress").innerHTML = 'EmailAddress:' +
-        getQueryStringParmValue(email_address1);
+        getQueryStringParmValue("email_address1");
         
     $("confirmBtn").onclick=confirmData;
 };
+
+
 

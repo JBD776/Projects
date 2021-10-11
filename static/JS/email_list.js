@@ -32,6 +32,7 @@ var joinList = function() {
 
     // submit the form if all entries are valid
     // otherwise, display an error message
+    console.log('error message' + errorMessage);
     if (errorMessage == "") {
         $("email_form").submit(); 
     } else {
