@@ -19,10 +19,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
         $("h1").text('New heading about butterflies.');
-        $('p').html('New Paragraph about butterflies using html method');
+        $('p').html('Butterflies are insects in the macrolepidopteran clade Rhopalocera from the order Lepidoptera, which also includes moths. Adult butterflies have large, often brightly coloured wings, and conspicuous, fluttering flight.');
+       
         $('img').attr('src', 'https://www.kasandbox.org/programming-images/animals/butterfly_monarch.png');
         $('h1').css('color', 'blue');
         $('p').css('color', 'red');
+        $('body').css('color', 'red');
+        $('<span>Butterflies tend to fold their wings vertically up over their backs. Moths tend to hold their wings in a tent-like fashion that hides the abdomen. Butterflies are typically larger and have more colorful patterns on their wings. Moths are typically smaller with drab-colored wings</span>').appendTo('body');
     </script>
     
     </body>
