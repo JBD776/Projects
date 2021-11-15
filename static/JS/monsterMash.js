@@ -6,8 +6,12 @@ $(function()
         mouthclick =0;
 
         /*audio.playbackRate=2;
-        audio.play();
-        lightning_one();*/
+        audio.play();*/
+  
+
+        lightning_one();
+        lightning_two();
+        lightning_three();
 
 
         $('#head').on('contextmenu', function(e){
@@ -88,6 +92,23 @@ $(function()
                 headclick =0;
             }
         });
+
+        function lightning_one(){
+            $('#lightning1').fadeIn(250).fadeOut(550);
+            setTimeout('lightning_one()', 4000);
+            
+            
+        };
+
+        function lightning_two(){
+            $('#lightning2').fadeIn(250).fadeOut(550);
+            setTimeout('lightning_two()', 4000);
+        };
+
+        function lightning_three(){
+            $('#lightning3').fadeIn(250).fadeOut(550);
+            setTimeout('lightning_three()', 4000);
+        };
 
         
 });
