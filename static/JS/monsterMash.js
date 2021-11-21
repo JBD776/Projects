@@ -1,3 +1,5 @@
+let clickHappen =false;
+
 $(function()
 {
     let headclick = 0;
@@ -59,6 +61,7 @@ $(function()
                 $(this).animate({ left: '0px'}, 500);
                 mouthclick =0;
             }
+            clickHappend = true;
         });
 
         $('#nose').on('click', function(){
@@ -69,6 +72,7 @@ $(function()
                 $(this).animate({ left: '0px'}, 500);
                 noseclick =0;
             }
+            clickHappend = true;
         });
 
         $('#eyes').on('click', function(){
@@ -79,6 +83,7 @@ $(function()
                 $(this).animate({ left: '0px'}, 500);
                 eyeclick =0;
             }
+            clickHappend = true;
         });
 
 
@@ -91,12 +96,15 @@ $(function()
                 $(this).animate({ left: '0px'}, 500);
                 headclick =0;
             }
+            clickHappend = true;
         });
 
         function lightning_one(){
             $('#lightning1').fadeIn(250).fadeOut(550);
             setTimeout('lightning_one()', 4000);
-            
+            if (clickHappen)
+                playThunder();
+
             
         };
 
@@ -110,5 +118,8 @@ $(function()
             setTimeout('lightning_three()', 4000);
         };
 
+        function playThunder(){
+            $('#thunder').get(0).playbackRate =2;
+        }
         
 });
