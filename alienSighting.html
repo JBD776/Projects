@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/jquery-ui.css">
+	<link rel="stylesheet" href="static/css/jquery-ui.min.css">
+	<link rel="stylesheet" href="static/css/jquery-ui.structure.css">
+	<link rel="stylesheet" href="static/css/jquery-ui.structure.css">
+	<script src="static/JS/jquery.js"></script>
+	<script src="static/JS/jquery-ui.js"></script>
+	<script src="static/JS/jquery-ui.min.js"></script>
+	<style>
+	body{
+		font-family: "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+	.demoHeaders {
+		margin-top: 2em;
+	}
+	#dialog-link {
+		padding: .4em 1em .4em 20px;
+		text-decoration: none;
+		position: relative;
+	}
+	#dialog-link span.ui-icon {
+		margin: 0 5px 0 0;
+		position: absolute;
+		left: .2em;
+		top: 50%;
+		margin-top: -8px;
+	}
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	select {
+		width: 200px;
+	}
+
+  #custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+  }
+	</style>
+</head>
+<body>
+
+<h1>Alien Sighting Form</h1>
+
+<div class="ui-widget">
+	<p>This form is official testimony for extrata terestrial sightings in the United States.</p>
+</div>
+
+<h2>Date of Sighting</h2>
+
+<!-- Datepicker -->
+<h2 class="demoHeaders"></h2>
+<div id="datepicker"></div>
+
+
+<!-- Button 
+<h2 class="demoHeaders">Button</h2>
+<button id="button">A button element</button>
+<button id="button-icon">An icon-only button</button> -->
+
+<!-- Checkboxradio -->
+<h2 class="demoHeaders">Creature Type</h2>
+<form style="margin-top: 1em;">
+	<div id="radioset">
+		<input type="radio" id="radio1" name="radio"><label for="radio1">Sponge-Like</label>
+		<input type="radio" id="radio2" name="radio" checked="checked"><label for="radio2">Worm-Like</label>
+		<input type="radio" id="radio3" name="radio"><label for="radio3">Reptilian</label>
+		<input type="radio" id="radio4" name="radio"><label for="radio4">Grey</label>
+		<input type="radio" id="radio5" name="radio"><label for="radio5">Insect-like</label>
+	</div>
+</form>
+
+</div>
+
+<!-- ui-dialog -->
+<div id="dialog" title="Dialog Title">
+	<p>Thank you for your submission of your experience with the fourth kind. This fomr will be forwarded to the Pentagon. 
+		Good day.
+	</p>
+</div>
+
+<!-- Slider -->
+<h2 class="demoHeaders">Approximate Weight(Kg)</h2>
+<div id="slider">
+	<div id="custom-handle" class="ui-slider-handle"></div>
+  </div>
+ 
+<h2 form id="reservation">
+	<label for="eyes">Number of Eyes</label></h2>
+	<select name="eyes" id="eyes">
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	  <option>6</option>
+	</select>
+  </form>
+
+  <h2 form id="reservation">
+	<label for="arms">Number of Arms</label></h2>
+	<select name="arms" id="arms">
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	  <option>6</option>
+	</select>
+  </form>  
+
+  <h2 form id="reservation">
+	<label for="legs">Number of Legs</label></h2>
+	<select name="legs" id="legs">
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	  <option>6</option>
+	</select>
+  </form>  
+
+<!-- Spinner -->
+<h2 class="demoHeaders2">Spinner</h2>
+<input id="spinner2">
+
+
+<!-- Spinner -->
+<h2 class="demoHeaders">Spinner</h2>
+<input id="spinner">
+
+<!-- Spinner -->
+<h2 class="demoHeaders">Spinner</h2>
+<input id="spinner">
+
+
+
+<h2 class="demoHeaders"></h2>
+<p>
+	<button id="dialog-link" class="ui-button ui-corner-all ui-widget">
+		<span class="ui-icon ui-icon-newwin"></span>Submit Form
+	</button>
+</p>
+
+
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+$( "#accordion" ).accordion();
+
+var availableTags = [
+	"ActionScript",
+	"AppleScript",
+	"Asp",
+	"BASIC",
+	"C",
+	"C++",
+	"Clojure",
+	"COBOL",
+	"ColdFusion",
+	"Erlang",
+	"Fortran",
+	"Groovy",
+	"Haskell",
+	"Java",
+	"JavaScript",
+	"Lisp",
+	"Perl",
+	"PHP",
+	"Python",
+	"Ruby",
+	"Scala",
+	"Scheme"
+];
+$( "#autocomplete" ).autocomplete({
+	source: availableTags
+});
+
+$( "#button" ).button();
+$( "#button-icon" ).button({
+	icon: "ui-icon-gear",
+	showLabel: false
+});
+
+$( "#radioset" ).buttonset();
+
+$( "#controlgroup" ).controlgroup();
+
+$( "#tabs" ).tabs();
+
+$( "#dialog" ).dialog({
+	autoOpen: false,
+	width: 400,
+	buttons: [
+		{
+			text: "Ok",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		},
+		{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	]
+});
+
+// Link to open the dialog
+$( "#dialog-link" ).click(function( event ) {
+	$( "#dialog" ).dialog( "open" );
+	event.preventDefault();
+});
+
+$( "#datepicker" ).datepicker({
+	inline: true
+});
+
+$( "#spinner" ).spinner();
+
+$( "#menu" ).menu();
+
+$( "#tooltip" ).tooltip();
+
+$( "#selectmenu" ).selectmenu();
+
+// Hover states on the static widgets
+$( "#dialog-link, #icons li" ).hover(
+	function() {
+		$( this ).addClass( "ui-state-hover" );
+	},
+	function() {
+		$( this ).removeClass( "ui-state-hover" );
+	}
+);
+$( function() {
+    var select = $( "#eyes" );
+    var slider = $( "<div id='slider'></div>" ).insertAfter( select ).slider({
+      min: 1,
+      max: 6,
+      range: "min",
+      value: select[ 0 ].selectedIndex + 1,
+      slide: function( event, ui ) {
+        select[ 0 ].selectedIndex = ui.value - 1;
+      }
+    });
+    $( "#eyes" ).on( "change", function() {
+      slider.slider( "value", this.selectedIndex + 1 );
+    });
+  } );
+
+$( function() {
+    var select = $( "#arms" );
+    var slider = $( "<div id='slider'></div>" ).insertAfter( select ).slider({
+      min: 1,
+      max: 6,
+      range: "min",
+      value: select[ 0 ].selectedIndex + 1,
+      slide: function( event, ui ) {
+        select[ 0 ].selectedIndex = ui.value - 1;
+      }
+    });
+    $( "#arms" ).on( "change", function() {
+      slider.slider( "value", this.selectedIndex + 1 );
+    });
+  } );
+
+  $( function() {
+    var select = $( "#legs" );
+    var slider = $( "<div id='slider'></div>" ).insertAfter( select ).slider({
+      min: 1,
+      max: 6,
+      range: "min",
+      value: select[ 0 ].selectedIndex + 1,
+      slide: function( event, ui ) {
+        select[ 0 ].selectedIndex = ui.value - 1;
+      }
+    });
+    $( "#legs" ).on( "change", function() {
+      slider.slider( "value", this.selectedIndex + 1 );
+    });
+  } );
+
+  $( function() {
+    var handle = $( "#custom-handle" );
+    $( "#slider" ).slider({
+      create: function() {
+        handle.text( $( this ).slider( "value" ) );
+      },
+      slide: function( event, ui ) {
+        handle.text( ui.value );
+      }
+    });
+  
+
+  function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );
+    };
+ 
+    // Set effect from select menu value
+    $( "#button" ).on( "click", function() {
+      runEffect();
+    });
+  } );
+</script>
+</body>
+</html>
