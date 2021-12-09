@@ -81,11 +81,35 @@
   #green .ui-slider-handle { border-color: #8ae234; }
   #blue .ui-slider-range { background: #729fcf; }
   #blue .ui-slider-handle { border-color: #729fcf; }
+
+  .column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 	</style>
 </head>
 <body>
 
+
 <h1>Alien Sighting Form</h1>
+
+<div class="row">
+	<div class="column">
+	  <img src="images/Alien.jpeg" alt="Snow" style="width:200px;height:200px;">
+	</div>
+	<div class="column">
+	  <img src="images/Alien.jpeg" alt="Forest" style="width: 200px; height: 200px;">
+	</div>
+
+  </div>
 
 <div class="ui-widget">
 	<p>This form is official testimony for extrata terestrial sightings in the United States.</p>
